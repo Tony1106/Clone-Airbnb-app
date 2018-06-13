@@ -14,7 +14,7 @@ import {
 
 
 type Props = {};
-export default class Inbox extends Component {
+export default class DiTru extends Component {
 
   render() {
     return (

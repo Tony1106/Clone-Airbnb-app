@@ -14,7 +14,7 @@ import {
 
 
 type Props = {};
-export default class Saved extends Component {
+export default class ViecLam extends Component {
 
   render() {
     return (

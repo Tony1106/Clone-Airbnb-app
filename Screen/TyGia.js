@@ -14,7 +14,7 @@ import {
 
 
 type Props = {};
-export default class Explore extends Component {
+export default class TyGia extends Component {
 
 
   render() {
