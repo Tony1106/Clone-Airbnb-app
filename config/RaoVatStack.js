@@ -12,11 +12,15 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 import RaoVat from '../Screen/RaoVat'
 import Detail from '../Screen/Components/RaoVat/Detail'
+import SearchBar from '../Screen/Components/RaoVat/SearchBar'
 
 
 export const RaoVatStack = createStackNavigator({
   RaoVat: {
-    screen: RaoVat
+    screen: RaoVat,
+    navigationOptions: {
+       headerTitle: <SearchBar/>
+    }
   },
   Detail: {
     screen: Detail

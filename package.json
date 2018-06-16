@@ -13,7 +13,8 @@
     "react-native": "0.55.4",
     "react-native-star-rating": "^1.0.9",
     "react-native-vector-icons": "^4.6.0",
-    "react-navigation": "^2.0.4"
+    "react-navigation": "^2.0.4",
+    "tcomb-form-native": "^0.6.13"
   },
   "devDependencies": {
     "babel-jest": "23.0.1",

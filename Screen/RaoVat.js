@@ -23,16 +23,7 @@ export default  class RaoVat extends Component {
   render() {
     return (
       <Container>
-        <Header searchBar rounded >
-         <Item >
-           <Icon name="ios-search" />
-           <Input placeholder="Search" />
-           <Icon name="ios-people" />
-         </Item>
-         <Button transparent>
-           <Text>Search</Text>
-         </Button>
-       </Header>
+      
 
        <View style={{backgroundColor: '#dddddd', paddingTop: 10, paddingBottom: 10}}>
         <OptionLocation />

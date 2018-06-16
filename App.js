@@ -16,14 +16,14 @@ import {
 
 
 import {Tabs} from './config/router'
-
+import {RootStack} from './config/RootStack'
 
 
 type Props = {};
 
 export default class App extends React.Component {
   render() {
-    return <Tabs/>;
+    return <RootStack/>;
 
 
 

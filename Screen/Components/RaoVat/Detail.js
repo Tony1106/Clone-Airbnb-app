@@ -26,7 +26,7 @@ export default class Detail extends Component {
 
     <ScrollView stickyHeaderIndices={[0]}>
       <ButtonContact/>
-      <View >
+      <View style={{height: 280, marginTop: 0}}>
         <ScrollView  horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingVertical: 0}} style={{paddingTop: 20,paddingBottom: 0, backgroundColor: 'white', height: 350}}>
           <ImageDetail img={(require('../../../Asset/home1.jpg'))}/>
           <ImageDetail img={(require('../../../Asset/home1.jpg'))}/>

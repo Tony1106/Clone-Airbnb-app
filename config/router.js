@@ -44,7 +44,8 @@ export const Tabs = createBottomTabNavigator({
       tabBarLabel: 'Việc  Làm',
       tabBarIcon: ({tintColor}) => (
         <Icon name= 'ios-heart-outline' color={tintColor} size={24}/>
-      )
+      ),
+
 
     }
     },
