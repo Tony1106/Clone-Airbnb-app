@@ -12,10 +12,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import TrangChu from '../Screen/TrangChu'
 import DiTru from '../Screen/DiTru'
 import ViecLam from '../Screen/ViecLam'
-import TyGia from '../Screen/TyGia'
-import RaoVat from '../Screen/RaoVat'
-import Detail from '../Screen/Components/RaoVat/Detail'
+import CaNhan from '../Screen/CaNhan'
 import {RaoVatStack} from './RaoVatStack'
+import {PersonalStack} from './PersonalStack.js'
 export const Tabs = createBottomTabNavigator({
   TrangChu: {
     screen: TrangChu,
@@ -59,10 +58,10 @@ export const Tabs = createBottomTabNavigator({
 
     }
     },
-  TyGia: {
-    screen: TyGia,
+  CaNhan: {
+    screen: PersonalStack,
     navigationOptions: {
-      tabBarLabel: 'Tỷ Giá',
+      tabBarLabel: 'Cá Nhân',
       tabBarIcon: ({tintColor}) => (
         <Image source={require('../Asset/Aibnb.png')} style={{height: 24, width: 24, tintColor: tintColor}}/>
       )

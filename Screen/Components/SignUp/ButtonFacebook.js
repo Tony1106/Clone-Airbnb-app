@@ -10,18 +10,66 @@ import {
   TouchableOpacity
 
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {Button } from 'native-base'
+import * as firebase from 'firebase';
 const {height, width} = Dimensions.get('window')
+var { FBLogin, FBLoginManager } = require('react-native-facebook-login');
 class ButtonFacebook extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      user: '',
+    }
+  }
+  componentWillMount(){
+    var userId = this.state.user.userId;
+    fetch("https://graph.facebook.com/v3.0/" +userId + "/picture").then((data)=> data.json()).then((data)=>console.log(data));
+  }
   render () {
+    var _this = this;
+    var userId = "2188836411133797";
+    fetch("https://graph.facebook.com/v3.0/2188836411133797/picture").then((data)=> data.json()).then((data)=>console.log(data));
+  
+    
   return(
-    <View style={{flexDirection: 'row', alignItems: 'center',marginTop: 30}}>
-      <View style={{flexDirection: 'row', width: width-50, height: 40, justifyContent: 'center', alignItems:'center'}}>
-          <Button iconLeft success style={{flex: 3 }}>
-            <Icon name='logo-facebook' style={{flex:1, fontSize: 35, paddingHorizontal: 20, paddingRight: 0}}/>
-            <Text style={{paddingLeft: 0,fontSize: 20, textAlign: 'center', flex: 4}}> Dang Ky Bang Facebook </Text></Button>
-      </View>
+    <View style={{alignItems: 'center',marginTop: 30}}>
+      <FBLogin style={{ marginBottom: 10, }}
+        ref={(fbLogin) => { this.fbLogin = fbLogin }}
+        permissions={["email","public_profile"]}
+        // loginBehavior={FBLoginManager.LoginBehaviors.Native}
+        onLogin={function(data){
+          console.log("Logged in!");
+          console.log(data);
+          var token = data.credentials.token;
+          const credential = firebase.auth.FacebookAuthProvider.credential(token);
+          const currentUser =  firebase.auth().signInAndRetrieveDataWithCredential(credential);
+          
+          _this.setState({ user : data.credentials });
+        }}
+        onLogout={function(){
+          console.log("Logged out.");
+          _this.setState({ user : null });
+        }}
+        onLoginFound={function(data){
+          console.log("Existing login found.");
+          console.log(data);
+          _this.setState({ user : data.credentials });
+        }}
+        onLoginNotFound={function(){
+          console.log("No user logged in.");
+          _this.setState({ user : null });
+        }}
+        onError={function(data){
+          console.log("ERROR");
+          console.log(data);
+        }}
+        onCancel={function(){
+          console.log("User cancelled.");
+        }}
+        onPermissionsMissing={function(data){
+          console.log("Check permissions!");
+          console.log(data);
+        }}
+      />
     </View>
   )
   }

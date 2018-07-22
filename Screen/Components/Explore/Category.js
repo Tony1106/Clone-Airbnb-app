@@ -16,7 +16,7 @@ export default class Category extends Component {
   render(){
     const img = this.props.img;
     const text = this.props.text;
-    console.log(img, text);
+
     return(
       <View style = {{height: 130, width: 130, borderWidth: 0.5, borderColor: '#dddddd', marginLeft: 20}}>
         <View style={{flex: 2}}>

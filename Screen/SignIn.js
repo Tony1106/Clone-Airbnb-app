@@ -12,11 +12,13 @@ import {
   Text,
   Image,
   FlatList,
+  AsyncStorage,
   TouchableOpacity
 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {Container, Button, Form, Item, Label, Input } from 'native-base'
+
 import ButtonFacebook from './Components/SignIn/ButtonFacebook'
 import ButtonGoogle from './Components/SignIn/ButtonGoogle'
 const {height, width} = Dimensions.get('window')
@@ -35,17 +37,22 @@ export default class SignIn extends React.Component {
   SignInUser = (id, password) => {
 
   try{
-    firebase.auth().signInWithEmailAndPassword(id, password).then((user)=>{
+    firebase.auth().signInWithEmailAndPassword(id, password)
+
+    .then((user)=>{
+      const userID = user.user.uid;
+      AsyncStorage.setItem("checkSignIn", "true");
+      AsyncStorage.setItem("userID", userID);
+      AsyncStorage.setItem("avatar", "https://cdn.iconscout.com/public/images/icon/free/png-512/avatar-user-coder-3579ca3abc3fd60f-512x512.png");
+
       this.props.navigation.navigate('DangTin');
-      
+
 
     }) ;
   }
   catch(error) {
     console.log(error.toString,'error')
-  }
-  console.log(this.state.userID, this.state.isSignIn);
-  }
+  }}
 
 
   render() {

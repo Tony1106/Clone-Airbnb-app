@@ -29,6 +29,7 @@ import {Container, Button, Form, Item, Label, Input } from 'native-base'
 import ButtonFacebook from './Components/SignUp/ButtonFacebook'
 import ButtonGoogle from './Components/SignUp/ButtonGoogle'
 const {height, width} = Dimensions.get('window')
+
 export default class SignUp extends React.Component {
   constructor(props){
     super(props)
@@ -59,6 +60,9 @@ console.log(user);
 catch(error) {
   console.log(error.toString)
 }
+}
+signUpByFacebook(){
+
 }
   render() {
     return (
@@ -106,7 +110,8 @@ catch(error) {
             //Login with facebook/gooogle
 
             //Button Facebook
-            <ButtonFacebook style={{alignItems: 'center'}}/>
+            <ButtonFacebook  style={{alignItems: 'center'}}/>
+           
             //Button google
             <ButtonGoogle style={{alignItems: 'center'}}/>
             //By sign up you agree with our condition

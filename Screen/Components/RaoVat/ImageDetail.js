@@ -20,7 +20,7 @@ export default class ImageDetail extends Component {
   render() {
     return (
     <View>
-      <Image source={this.props.img} style={{height: 250, width: width, resizeMode: 'cover'}}/> 
+      <Image source={{uri: this.props.img}} style={{height: 250, width: width, resizeMode: 'cover'}}/> 
     </View>
 
 
