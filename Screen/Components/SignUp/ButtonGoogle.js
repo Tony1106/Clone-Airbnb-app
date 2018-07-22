@@ -14,11 +14,6 @@ import * as firebase from 'firebase';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {Button } from 'native-base'
 const {height, width} = Dimensions.get('window')
-const FBSDK = require('react-native-fbsdk');
-const {
-  LoginButton,
-  AccessToken
-} = FBSDK;
 class ButtonGoogle extends React.Component {
   constructor(){
     super()
@@ -47,26 +42,9 @@ class ButtonGoogle extends React.Component {
   return(
     <View style={{flexDirection: 'row', alignItems: 'center', marginTop: 30}}>
       <View style={{flexDirection: 'row', width: width-50, height: 40, justifyContent: 'center', alignItems:'center'}}>
-      <View>
-        <LoginButton
-          publishPermissions={["publish_actions"]}
-          onLoginFinished={
-            (error, result) => {
-              if (error) {
-                alert("login has error: " + result.error);
-              } else if (result.isCancelled) {
-                alert("login is cancelled.");
-              } else {
-                AccessToken.getCurrentAccessToken().then(
-                  (data) => {
-                    alert(data.accessToken.toString())
-                  }
-                )
-              }
-            }
-          }
-          onLogoutFinished={() => alert("logout.")}/>
-      </View>
+          <Button onPress={()=> this.signInFacebook} iconLeft danger style={{flex: 3 }}>
+            <Icon name='logo-google' style={{flex:1, fontSize: 35, paddingHorizontal: 20, paddingRight: 0}}/>
+            <Text style={{paddingLeft: 0,fontSize: 20, textAlign: 'center', flex: 4}}> Dang Ky Bang Google </Text></Button>
       </View>
     </View>
   )

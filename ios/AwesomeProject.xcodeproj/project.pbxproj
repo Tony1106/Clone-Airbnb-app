@@ -62,9 +62,12 @@
 		BE3B30A820FCB831000F507E /* libRCTFBLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B308420FCB807000F507E /* libRCTFBLogin.a */; };
 		BE3B30EC20FCD513000F507E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE3B30BF20FCD513000F507E /* GoogleService-Info.plist */; };
 		BE3B314B210409FE000F507E /* DocSets in Resources */ = {isa = PBXBuildFile; fileRef = BE3B314A210409FE000F507E /* DocSets */; };
-		BE3B314F21040A2C000F507E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B314C21040A2C000F507E /* FBSDKShareKit.framework */; };
 		BE3B315021040A2C000F507E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B314D21040A2C000F507E /* FBSDKCoreKit.framework */; };
 		BE3B315121040A2C000F507E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B314E21040A2C000F507E /* FBSDKLoginKit.framework */; };
+		BE3B320921041698000F507E /* libFBSDKLoginKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B320821041698000F507E /* libFBSDKLoginKit.a */; };
+		BE3B320B210416A0000F507E /* libFBSDKCoreKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B320A210416A0000F507E /* libFBSDKCoreKit.a */; };
+		BE3B320D210416A9000F507E /* libFirebaseCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B320C210416A9000F507E /* libFirebaseCore.a */; };
+		BE3B320E210416DC000F507E /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE3B312621040947000F507E /* libRCTFBSDK.a */; };
 		BEAE867520D56D0C00BEB87E /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAE867420D5693000BEB87E /* libRCTCameraRoll.a */; };
 		BED2689C20F1DD290080EBFD /* ImageCropPickerSDK in Resources */ = {isa = PBXBuildFile; fileRef = BED2687020F1DD290080EBFD /* ImageCropPickerSDK */; };
 		D2728DDE28CF4492971DCA52 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B553AB13614F4DD39B32BF89 /* rubicon-icon-font.ttf */; };
@@ -433,10 +436,12 @@
 		21775790661E49699029FD17 /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFetchBlob.xcodeproj; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; };
 		2B9D59F3E15444C190698FA6 /* imageCropPicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = imageCropPicker.xcodeproj; path = "../node_modules/react-native-image-crop-picker/ios/imageCropPicker.xcodeproj"; sourceTree = "<group>"; };
 		2CB853CEFF544B5B8A8089F2 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		2CDBBA56CA234F4297AC2D82 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ./ios/Frameworks/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* AwesomeProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AwesomeProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AwesomeProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AwesomeProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E06A759685E4C96ADB26D57 /* libRCTFBSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTFBSDK.a; sourceTree = "<group>"; };
+		31A0283B2A954A31AFD594EA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ./ios/Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		3B26F8E1BDB641B2B64E9235 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		3BD09E2CE9C045A8A556D8FE /* libRNFetchBlob.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNFetchBlob.a; sourceTree = "<group>"; };
 		41B009BE547D4D47A49CF980 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -473,6 +478,9 @@
 		BE3B314C21040A2C000F507E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-4/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		BE3B314D21040A2C000F507E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		BE3B314E21040A2C000F507E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		BE3B320821041698000F507E /* libFBSDKLoginKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKLoginKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3B320A210416A0000F507E /* libFBSDKCoreKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFBSDKCoreKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE3B320C210416A9000F507E /* libFirebaseCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFirebaseCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEAE866F20D5693000BEB87E /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		BEAE86B120D5E0D800BEB87E /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		BED2687020F1DD290080EBFD /* ImageCropPickerSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ImageCropPickerSDK; path = "../node_modules/react-native-image-crop-picker/ios/ImageCropPickerSDK"; sourceTree = "<group>"; };
@@ -485,6 +493,7 @@
 		BEDFA14D20E79AF300A29B15 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		BEDFA15320E79B0900A29B15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../../Downloads/FacebookSDKs-iOS-4/Bolts.framework"; sourceTree = "<group>"; };
 		BEDFA15C20E79B1600A29B15 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C1A0B838415F442D9045FCD6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ./ios/Frameworks/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		CFC273E96451EBA7D3F0FA3F /* libPods-AwesomeProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0081C1DE5D743F78B096CDE /* Pods-AwesomeProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeProject/Pods-AwesomeProject.debug.xcconfig"; sourceTree = "<group>"; };
 		E189511AB438A672573F54F2 /* Pods-AwesomeProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeProject-tvOS/Pods-AwesomeProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -508,6 +517,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE3B320E210416DC000F507E /* libRCTFBSDK.a in Frameworks */,
+				BE3B320D210416A9000F507E /* libFirebaseCore.a in Frameworks */,
+				BE3B320B210416A0000F507E /* libFBSDKCoreKit.a in Frameworks */,
+				BE3B320921041698000F507E /* libFBSDKLoginKit.a in Frameworks */,
 				BE3B30A820FCB831000F507E /* libRCTFBLogin.a in Frameworks */,
 				BEAE867520D56D0C00BEB87E /* libRCTCameraRoll.a in Frameworks */,
 				BE3B315121040A2C000F507E /* FBSDKLoginKit.framework in Frameworks */,
@@ -524,7 +537,6 @@
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
-				BE3B314F21040A2C000F507E /* FBSDKShareKit.framework in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				52F7B1C459B947679645DFB9 /* libRNFetchBlob.a in Frameworks */,
 				3C61C3E7750248B2798CBB46 /* libPods-AwesomeProject.a in Frameworks */,
@@ -679,6 +691,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BE3B320C210416A9000F507E /* libFirebaseCore.a */,
+				BE3B320A210416A0000F507E /* libFBSDKCoreKit.a */,
+				BE3B320821041698000F507E /* libFBSDKLoginKit.a */,
 				BE3B314D21040A2C000F507E /* FBSDKCoreKit.framework */,
 				BE3B314E21040A2C000F507E /* FBSDKLoginKit.framework */,
 				BE3B314C21040A2C000F507E /* FBSDKShareKit.framework */,
@@ -689,6 +704,9 @@
 				BB82C2759F54BB5C26535AED /* libPods-AwesomeProject.a */,
 				13B805F6E9B1BC480AE63E0B /* libPods-AwesomeProject-tvOS.a */,
 				CFC273E96451EBA7D3F0FA3F /* libPods-AwesomeProject-tvOSTests.a */,
+				31A0283B2A954A31AFD594EA /* FBSDKCoreKit.framework */,
+				2CDBBA56CA234F4297AC2D82 /* FBSDKShareKit.framework */,
+				C1A0B838415F442D9045FCD6 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1671,6 +1689,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1709,6 +1728,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1748,7 +1768,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../../../../Downloads/FacebookSDKs-iOS-4";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Frameworks/",
+					"$(PROJECT_DIR)/./ios/Frameworks",
+					"$(SRCROOT)/../../../../../../Downloads/FacebookSDKs-iOS-4",
+					"\"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1782,7 +1807,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../../../../Downloads/FacebookSDKs-iOS-4";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/Frameworks/",
+					"$(PROJECT_DIR)/./ios/Frameworks",
+					"$(SRCROOT)/../../../../../../Downloads/FacebookSDKs-iOS-4",
+					"\"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1819,6 +1849,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1863,6 +1894,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1906,6 +1938,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1949,6 +1982,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2001,6 +2035,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2043,6 +2078,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks/";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;

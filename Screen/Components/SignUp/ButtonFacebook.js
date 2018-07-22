@@ -13,6 +13,7 @@ import {
 import * as firebase from 'firebase';
 const {height, width} = Dimensions.get('window')
 var { FBLogin, FBLoginManager } = require('react-native-facebook-login');
+import axios from 'axios'
 class ButtonFacebook extends React.Component {
   constructor(props){
     super(props)
@@ -21,14 +22,14 @@ class ButtonFacebook extends React.Component {
     }
   }
   componentWillMount(){
-    var userId = this.state.user.userId;
-    fetch("https://graph.facebook.com/v3.0/" +userId + "/picture").then((data)=> data.json()).then((data)=>console.log(data));
+    axios.get(`https://jsonplaceholder.typicode.com/users`)
+    .then(res => {
+      const persons = res.data;
+      console.log(persons);
+      
+    })
   }
   render () {
-    var _this = this;
-    var userId = "2188836411133797";
-    fetch("https://graph.facebook.com/v3.0/2188836411133797/picture").then((data)=> data.json()).then((data)=>console.log(data));
-  
     
   return(
     <View style={{alignItems: 'center',marginTop: 30}}>
