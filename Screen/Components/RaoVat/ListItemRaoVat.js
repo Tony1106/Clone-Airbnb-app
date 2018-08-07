@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import {Spinner} from 'native-base';
 import {locationFilterData, categoryFilterData} from '../../../Asset/Data/dataSource'
-
+import OptionLocation from './OptionLocation'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { withNavigation } from 'react-navigation';
 
@@ -33,6 +33,9 @@ class ListItemRaoVat extends Component {
       isFilter: false,
       timeOfPresent: '',
       loadMoreData: true,
+      filterCategory: '',
+      filterLocation: '',
+      filter:''
 
     }
     this.handleDownloadData = this.handleDownloadData.bind(this);
@@ -44,21 +47,14 @@ class ListItemRaoVat extends Component {
     this.setState({timeOfPresent})
 
 }
-
-componentWillReceiveProps(nextProps) {
-  if(nextProps.filterLocation!==this.props.filterLocation||nextProps.filterCategory!==this.props.filterCategory ) {
-    this.handleDownloadDataWithPropsChange(nextProps)
-
-  }
-  else if (nextProps.filter !==null) {
-    this.handleFilterData(nextProps)
-  }
- 
-  
- 
+componentDidUpdate(prevProps, prevState) {
+   if(this.state.filterLocation != prevState.filterLocation || this.state.filterCategory != prevState.filterCategory ) {  
+     this.handleDownloadDataWithPropsChange(this.state)
+    };
 }
-handleFilterData(nextProps){
-  var filter = nextProps.filter;
+
+handleFilterData(value){
+  var filter = value;
   console.log(filter, 'filter');
   
   var filterOption;
@@ -127,23 +123,23 @@ const filterLocation = this.props.filterLocation;
   };
 }
 
-handleDownloadDataWithPropsChange = (nextProps) => {
+handleDownloadDataWithPropsChange = (state) => {
   var roots = firebase.database().ref();
   var numbemLoadedItem = this.state.numbemLoadedItem;
 
   // filter location, category
-const filterCategory = nextProps.filterCategory;
-const filterLocation = nextProps.filterLocation;
-console.log(filterCategory, filterLocation, "filter");
+const filterCategory = state.filterCategory;
+const filterLocation = state.filterLocation;
+console.log(filterLocation, "filter");
 
   //defind orderbyChild
 
   var orderChild = '';
   var orderChildValue = '';
-  if (filterLocation!==''&&filterCategory==='') {
+  if (filterLocation!=''&&filterCategory==='') {
     orderChild = 'locationState';
     orderChildValue = filterLocation;
-  } else if(filterCategory!=='' && filterLocation==='') {
+  } else if(filterCategory!='' && filterLocation==='') {
     orderChild = 'category';
     orderChildValue = filterCategory;
   } else {
@@ -212,18 +208,24 @@ console.log(filterCategory, filterLocation, "filter");
 
     return (
     <TouchableOpacity onPress={()=>this.onPressItem(item.key, item.numberOfPhoto)}>
-      <View  style={{flexDirection: 'row', marginTop: 10, marginHorizontal: 20}}>
-        <Image onPress={this.navigate} style={{height: width/5, width: width/5, backgroundColor:'grey'}} source={{uri: Object.values(item.imageURL)[0]}}/>
-        <View style={{flex:1, alignItems: 'flex-start', justifyContent: 'space-around', paddingHorizontal: 10}}>
-          <Text style={{fontSize:13, textAlign: 'left'}}> {item.title}</Text>
-          <Text style={{color: 'red', fontSize:15, fontWeight: "700"}}> {item.price} $</Text>
+      <View  style={{flexDirection: 'row', marginTop: 10, marginHorizontal: 16}}>
+        <Image onPress={this.navigate} style={{height: 98, width: 98, borderRadius: 6, backgroundColor:'grey'}} source={{uri: Object.values(item.imageURL)[0]}}/>
+        <View style={{flex:1, alignItems: 'flex-start', justifyContent: 'space-between', paddingHorizontal: 10}}>
+          <Text style={{fontSize:18, fontWeight: "600", textAlign: 'left'}}> {item.title}</Text>
           <Text style={{fontSize:10}}> {item.locationSuburb} | {locationName} | {timeStamp}</Text>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <Text style={{flex: 1, fontSize:12, fontWeight: "500", textAlign: "left",letterSpacing: 0.1}}> Tony Bui</Text>
+            <View style={{borderRadius: 10,borderColor: 'black'}}>
+              <Text style={{  borderRadius: 10,textAlign: 'center', backgroundColor: '#f6edff', color: '#934ddc', fontSize:12, fontWeight: "600", textAlign: "right", textShadowOffset: {width: 20, fontFamily: 'SFProText-Semibold', height: 20}, textShadowColor:'black' }}> {item.price} $</Text>
+            </View>
+          </View>
         </View>
 
       </View>
     </TouchableOpacity>
 
   )}
+ 
 
   onPressItem = (key, numberOfPhoto)=> {
     this.props.navigation.navigate('Detail', {
@@ -255,7 +257,13 @@ console.log(filterCategory, filterLocation, "filter");
   };
 
   renderHeader = () => {
-    if (!this.state.refreshing) return null;
+
+    var filter = (
+    <View style={{backgroundColor: '#dddddd', paddingTop: 10, paddingBottom: 10, alignItems:'center' , justifyContent:'center'}}>
+    <OptionLocation onHandleFilterLocation={value => this.setState({filterLocation: value})} onHandleFilterCategory={value => this.setState({filterCategory: value})} onHandleFilter = {value => this.setState({filter: value}, this.handleFilterData(this.state.filter))}/>
+ </View>
+ );
+    if (!this.state.refreshing) return filter;
 
     return (
       <View
@@ -267,7 +275,10 @@ console.log(filterCategory, filterLocation, "filter");
       >
           <Spinner color='green' />
       </View>
+     
     );
+
+   
   };
 
   handleRefeshing = () => {
@@ -290,7 +301,8 @@ console.log(filterCategory, filterLocation, "filter");
   render() {
 
     return (
-
+     <View> 
+     
       <FlatList
          data={this.state.data}
          renderItem={this.renderItem}
@@ -303,7 +315,9 @@ console.log(filterCategory, filterLocation, "filter");
          onEndReachedThreshold ={0}
          onEndReached = {this.handleLoadMore}
 
+
        />
+        </View> 
 
     );
   }

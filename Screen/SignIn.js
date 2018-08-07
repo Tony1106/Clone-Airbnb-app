@@ -60,8 +60,10 @@ export default class SignIn extends React.Component {
       //DANG NHAP BANG EMAIL
       <Container style={{backgroundColor:'white', justifyContent: 'center'}}>
         <View style={{alignItems: 'center'}}>
+
           <Text style={{fontSize: 30, fontWeight: "700"}}> Đăng Nhap</Text>
         </View>
+       
 
         <Form>
           <Item >
@@ -98,7 +100,7 @@ export default class SignIn extends React.Component {
             </Form>
         <View style={{alignItems: 'center'}}>
             //Login with facebook/gooogle
-
+           
             //Button Facebook
             <ButtonFacebook style={{alignItems: 'center'}}/>
             //Button google

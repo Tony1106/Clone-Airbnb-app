@@ -16,14 +16,8 @@ import SearchBar from '../Screen/Components/RaoVat/SearchBar'
 
 
 export const RaoVatStack = createStackNavigator({
-  RaoVat: {
-    screen: RaoVat,
-    navigationOptions: {
-       headerTitle: <SearchBar/>
-    }
-  },
-  Detail: {
-    screen: Detail
-  }
-
-});
+  RaoVat: {screen: RaoVat},
+  Detail: {screen: Detail}
+},
+{ headerMode: 'none' }
+);

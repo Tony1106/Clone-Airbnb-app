@@ -9,7 +9,7 @@ export const isSignedIn = () => {
 
     AsyncStorage.getItem("checkSignIn")
       .then(res => {
-        if (res !== null) {
+        if (res === true) {
           resolve(true);
         } else {
           resolve(false);

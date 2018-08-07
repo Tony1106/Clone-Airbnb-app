@@ -4,31 +4,43 @@ import {
   Dimensions,
   View,
   TextInput,
-  Button
+  TouchableOpacity
+  
 
 } from 'react-native';
+import {Button} from 'native-base'
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import DangBaiButton from './DangBaiButton'
+
 
 const {height, width} = Dimensions.get('window')
 
 export default class SearchBar extends Component {
+constructor(props){
+  super(props)
+  this.state = {
+    searchText: ''
+  }
+}
+handleSearch() {
+  this.props.onhandleSearch(this.state.searchText)
+  
+}
 
   render() {
     return (
-      <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',paddingHorizontal: 20}}>
+
         //  Search Bar
-        <View style={{flex: 2, flexDirection: 'row', justifyContent: 'space-between', backgroundColor: 'white',shadowOffset: {width: 1, height: 1}, borderColor: '#dddddd',  width: 50, justifyContent: 'flex-start', alignItems:'center', height: 30, borderWidth: 1,}}>
+        <View style={{flex: 2, flexDirection: 'row', justifyContent: 'space-between', backgroundColor: 'white',shadowOffset: {width: 1, height: 1}, borderColor: '#dddddd',  width: width-10, alignItems:'center', borderWidth: 1,}}>
 
-           <TextInput placeholder="Search" style={{flex: 5 }}/>
-           <Icon name='ios-search' style={{flex: 1,fontSize: 24}}/>
-
+           <TextInput onChangeText={(searchText)=> this.setState({searchText})} placeholder="Tìm kiếm" style={{flex: 10, paddingLeft: 10, height: 20}}/>
+           <TouchableOpacity onPress={()=>this.handleSearch()} style={{flex: 2, alignItems:'center'}}> 
+              <Icon name='ios-search' color='#934ddc' style={{fontSize: 20}}/>
+            </TouchableOpacity> 
         </View>
-        //Nut dang bai
-        <DangBaiButton/>
+    
 
-      </View>
+
 
     )
   }
